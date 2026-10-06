@@ -57,6 +57,10 @@ sound/xms/                 XMS sounds
 To install on a server, copy `addons/`, `cfg/` and `sound/` over the server's
 `hl2mp/`, and drop `maps/*.nav` into `hl2mp/maps/` next to the `.bsp` files.
 
+Each plugin section below links its **Download** straight at the compiled `.smx`
+committed in this repository, so what you get is the 64-bit build that matches
+this tree. Upstream's releases are 32-bit and will not load on a 64-bit server.
+
 ## Building
 
 Needs a SourceMod install for `spcomp64` and the stock includes — 1.12 is what
@@ -145,7 +149,7 @@ You can configure these in `cfg/sourcemod/plugins.xfov.cfg` after first load.
 * `xfov_maxfov` - Maximum FOV allowed on server. 110 by default.
 
 ### Download
-* [Download zip](https://github.com/utharper/sourcemod-hl2dm/releases/download/latest/xfov.zip)
+* [xfov.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xfov.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xfov.sp)
 
 
@@ -175,7 +179,7 @@ This has not really been developed far but already fixes a few things:
 No configuration is required.
 
 ### Download
-* [Download](https://github.com/utharper/sourcemod-hl2dm/releases/download/latest/xfix.smx)
+* [xfix.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xfix.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xfix.sp)
 
 
@@ -306,7 +310,7 @@ Finally, you will need to configure your mapcycles (these are also in the `cfg` 
 You can refer to any `error_` log files in `addons/sourcemod/logs` to help identify problems. If you need help, post in the #development channel on Discord.
 
 ### Download
-* [Download zip](https://github.com/utharper/sourcemod-hl2dm/releases/download/latest/xms.zip)
+* [xms.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xms.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xms.sp)
 
 
@@ -398,6 +402,7 @@ an empty server is dropped within about a second. Testing anything here needs a
 player actually connected.
 
 ### Download
+* [xms_bots.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xms_bots.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xms_bots.sp)
 
 
@@ -426,6 +431,7 @@ A demo only looks right if it was *recorded* with the plugin running — the fla
 baked into the recorded snapshot, so demos recorded before it stay as they were.
 
 ### Download
+* [xshadows.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xshadows.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xshadows.sp)
 
 
@@ -451,6 +457,7 @@ The command is open to everyone on purpose — this server has no admin entries 
 the server is ever opened to strangers, move it back to `RegAdminCmd` first.
 
 ### Download
+* [xms_matchtest.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xms_matchtest.smx) (64-bit)
 * [Source](addons/sourcemod/scripting/xms_matchtest.sp)
 
 
@@ -465,7 +472,7 @@ It will also optionally post player feedback (submitted via the XMS menu) to a s
 Everything is configured in the `"Discord"` section of `xms.cfg`.
 
 ### Download
-* Included with XMS download
+* [xms_discord.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/xms_discord.smx) (upstream, 64-bit safe)
 * [Source](addons/sourcemod/scripting/xms_discord.sp)
 
 
@@ -484,7 +491,7 @@ It is not strictly just a HUD, as it also provides hacky natives for other plugi
 Unfortunately, this plugin causes a LOT of rcon message spam in the server console. See [Cleaning up console spam](#Misc).
 
 ### Download
-* [Download zip](https://github.com/utharper/sourcemod-hl2dm/releases/download/latest/gameme_hud.zip)
+* [gameme_hud.smx](https://github.com/MXYLR/HL2DM-XMS-Plugin-Set/raw/master/addons/sourcemod/plugins/gameme_hud.smx) (upstream, 64-bit safe)
 * [Source](addons/sourcemod/scripting/gameme_hud.sp)
 
 
