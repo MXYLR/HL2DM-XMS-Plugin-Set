@@ -1,0 +1,9 @@
+# Build output belongs in addons/sourcemod/plugins/; an .smx sitting beside the
+# sources is one the server never sees.
+addons/sourcemod/scripting/*.smx
+
+# nav_regen.sh keeps the mesh it replaced beside the new one.
+maps/*.nav.bak
+
+Thumbs.db
+.DS_Store

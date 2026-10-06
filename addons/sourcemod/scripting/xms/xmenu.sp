@@ -483,14 +483,14 @@ public Action XMenuAction(int iClient, int iArgs)
                 // Letter select menu
                 else if (StrEqual(sParam[1], "byletter"))
                 {
-                    char sLetters[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    char sLetters[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     char sLetter [2];
 
                     Format(sMessage, sizeof(sMessage), "%T", "xmenumsg_2_map_filter", iClient);
 
                     dOptions.WriteString("0-9;0");
 
-                    for (int i = 0; i < sizeof(sLetters); i++)
+                    for (int i = 0; i < sizeof(sLetters) - 1; i++)
                     {
                         strcopy(sLetter, sizeof(sLetter), sLetters[i]);
                         Format(sOption, sizeof(sOption), "%s;%s", sLetter, sLetter);

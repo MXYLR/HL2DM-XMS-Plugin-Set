@@ -99,7 +99,7 @@ public Action Cmd_Maplist(int iClient, int iArgs)
         MC_ReplyToCommand(iClient, "%t", "xmsc_list_pre", sMode);
     }
 
-    iCount = GetMapsArray(sMaps, 512, MAX_MAP_LENGTH, sMapcycle, _, _, false, bAll);
+    iCount = GetMapsArray(sMaps, 512, MAX_MAP_LENGTH, sMapcycle, _, _, false, bAll, sMaps);
     SortStrings(sMaps, clamp(iCount, 0, 512), Sort_Ascending);
 
     for (int i = 0; i < iCount; i++)
@@ -227,7 +227,7 @@ public Action Cmd_Run(int iClient, int iArgs)
                 continue;
             }
 
-            iHits = GetMapsArray(sMaps, 512, MAX_MAP_LENGTH, sMapcycle);
+            iHits = GetMapsArray(sMaps, 512, MAX_MAP_LENGTH, sMapcycle, "", "", true, false, sMaps);
             if (iHits > 1)
             {
                 for (int y = 0; y < 5; y++)
@@ -359,7 +359,7 @@ public Action Cmd_Run(int iClient, int iArgs)
                 }
                 else
                 {
-                    iHits[0] = GetMapsArray(sHits, 256, MAX_MAP_LENGTH, "", "", sMap, true, false);
+                    iHits[0] = GetMapsArray(sHits, 256, MAX_MAP_LENGTH, "", "", sMap, true, false, sHits);
 
                     if (iHits[0] == 1) {
                         strcopy(sResultMap[i], sizeof(sResultMap[]), sHits[0]);

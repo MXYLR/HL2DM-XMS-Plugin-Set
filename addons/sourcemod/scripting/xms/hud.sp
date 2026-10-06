@@ -139,24 +139,6 @@ public Action T_TimeHud(Handle hTimer)
 }
 
 /**************************************************************
- * XMS ATTRIBUTION
- *************************************************************/
-public Action T_AnnouncePlugin(Handle hTimer, int iClient)
-{
-    static int i;
-
-    if (IsClientInGame(iClient) && i < 4)
-    {
-        PrintCenterText(iClient, "~ eXtended Match System by harper ~");
-        i++;
-        return Plugin_Continue;
-    }
-
-    i = 0;
-    return Plugin_Stop;
-}
-
-/**************************************************************
  * VOTING HUD
  *************************************************************/
 // contained within voting.sp:T_Voting

@@ -26,8 +26,6 @@ public void OnClientPutInServer(int iClient)
 
     if (!IsFakeClient(iClient))
     {
-        CreateTimer(1.0, T_AnnouncePlugin, iClient, TIMER_REPEAT | TIMER_FLAG_NO_MAPCHANGE);
-
         // play connect sound
         if (!(gRound.iState == GAME_MATCH || gRound.iState == GAME_MATCHEX || gRound.iState == GAME_MATCHWAIT)) {
             IfCookiePlaySoundAll(gSounds.cMisc, SOUND_CONNECT);

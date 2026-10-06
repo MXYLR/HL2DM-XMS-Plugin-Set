@@ -88,7 +88,7 @@ public void OnMapEnd()
     gRound.hOvertime = INVALID_HANDLE;
 }
 
-int GetMapsArray(char[][] sArray, int iLen1, int iLen2, const char[] sMapcycle = "", const char[] sMustBeginWith = "", const char[] sMustContain = "", bool bStopIfExactMatch = true, bool bStripPrefixes = false, char[][] sArray2 = sArray)
+int GetMapsArray(char[][] sArray, int iLen1, int iLen2, const char[] sMapcycle = "", const char[] sMustBeginWith = "", const char[] sMustContain = "", bool bStopIfExactMatch = true, bool bStripPrefixes = false, char[][] sArray2)
 {
     int  iHits;
     bool bExact;
