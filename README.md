@@ -42,7 +42,8 @@ constructs do not compile or do not behave the same on the 64-bit toolchain:
 
 ```
 addons/sourcemod/
-  configs/xms.cfg          upstream's gamemode and feature config
+  configs/xms.cfg          upstream's gamemode and feature config, plus the
+                           "Bots" tuning keys this fork's xms_bots reads
   plugins/*.smx            built plugins (drop-in)
   scripting/*.sp           sources, plus xms/ (the XMS modules)
   translations/            phrases
@@ -371,10 +372,11 @@ otherwise left alone.
 
 ### Configuration
 
-Every key below goes in the `"Bots"` section of `addons/sourcemod/configs/xms.cfg`.
-**This tree ships upstream's `xms.cfg` unchanged**, so none of these keys are
-present and each one falls back to its default — which for the whole list is
-"off". Add the ones you want.
+Every key below goes in the `"Bots"` section of `addons/sourcemod/configs/xms.cfg`,
+and this tree ships them all, at the values listed — a fresh checkout runs the
+setup these plugins were tested on. The **Default** column is what the plugin
+falls back to when a key is absent, which for most of the list is "off", so
+deleting a line is how you turn a feature back off.
 
 | Key | Default | What it does |
 |---|---|---|
